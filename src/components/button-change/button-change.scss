@@ -1,0 +1,16 @@
+.button-change{
+  border-radius: 4px;
+  color: red;
+  text-decoration: none;
+  padding: 20px;
+  margin: 10px;
+  cursor: pointer;
+  outline: none;
+  transition: all .2s ease-in;
+
+  &:hover{
+    opacity: .5;
+    transform: scale(1.1);
+  }
+}
+

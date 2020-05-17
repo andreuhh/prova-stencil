@@ -11,6 +11,12 @@ export namespace Components {
     interface AndreComponent {
         "titolo": string;
     }
+    interface BtnWrapper {
+    }
+    interface ButtonChange {
+    }
+    interface ButtonRemove {
+    }
     interface MoholeArticle {
         "textArticle": string;
         "textArticle2": string;
@@ -43,6 +49,24 @@ declare global {
     var HTMLAndreComponentElement: {
         prototype: HTMLAndreComponentElement;
         new (): HTMLAndreComponentElement;
+    };
+    interface HTMLBtnWrapperElement extends Components.BtnWrapper, HTMLStencilElement {
+    }
+    var HTMLBtnWrapperElement: {
+        prototype: HTMLBtnWrapperElement;
+        new (): HTMLBtnWrapperElement;
+    };
+    interface HTMLButtonChangeElement extends Components.ButtonChange, HTMLStencilElement {
+    }
+    var HTMLButtonChangeElement: {
+        prototype: HTMLButtonChangeElement;
+        new (): HTMLButtonChangeElement;
+    };
+    interface HTMLButtonRemoveElement extends Components.ButtonRemove, HTMLStencilElement {
+    }
+    var HTMLButtonRemoveElement: {
+        prototype: HTMLButtonRemoveElement;
+        new (): HTMLButtonRemoveElement;
     };
     interface HTMLMoholeArticleElement extends Components.MoholeArticle, HTMLStencilElement {
     }
@@ -83,6 +107,9 @@ declare global {
     interface HTMLElementTagNameMap {
         "andre-card": HTMLAndreCardElement;
         "andre-component": HTMLAndreComponentElement;
+        "btn-wrapper": HTMLBtnWrapperElement;
+        "button-change": HTMLButtonChangeElement;
+        "button-remove": HTMLButtonRemoveElement;
         "mohole-article": HTMLMoholeArticleElement;
         "mohole-menu": HTMLMoholeMenuElement;
         "mohole-title": HTMLMoholeTitleElement;
@@ -96,6 +123,13 @@ declare namespace LocalJSX {
     }
     interface AndreComponent {
         "titolo"?: string;
+    }
+    interface BtnWrapper {
+    }
+    interface ButtonChange {
+        "onChangeClick"?: (event: CustomEvent<any>) => void;
+    }
+    interface ButtonRemove {
     }
     interface MoholeArticle {
         "textArticle"?: string;
@@ -119,6 +153,9 @@ declare namespace LocalJSX {
     interface IntrinsicElements {
         "andre-card": AndreCard;
         "andre-component": AndreComponent;
+        "btn-wrapper": BtnWrapper;
+        "button-change": ButtonChange;
+        "button-remove": ButtonRemove;
         "mohole-article": MoholeArticle;
         "mohole-menu": MoholeMenu;
         "mohole-title": MoholeTitle;
@@ -133,6 +170,9 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "andre-card": LocalJSX.AndreCard & JSXBase.HTMLAttributes<HTMLAndreCardElement>;
             "andre-component": LocalJSX.AndreComponent & JSXBase.HTMLAttributes<HTMLAndreComponentElement>;
+            "btn-wrapper": LocalJSX.BtnWrapper & JSXBase.HTMLAttributes<HTMLBtnWrapperElement>;
+            "button-change": LocalJSX.ButtonChange & JSXBase.HTMLAttributes<HTMLButtonChangeElement>;
+            "button-remove": LocalJSX.ButtonRemove & JSXBase.HTMLAttributes<HTMLButtonRemoveElement>;
             "mohole-article": LocalJSX.MoholeArticle & JSXBase.HTMLAttributes<HTMLMoholeArticleElement>;
             "mohole-menu": LocalJSX.MoholeMenu & JSXBase.HTMLAttributes<HTMLMoholeMenuElement>;
             "mohole-title": LocalJSX.MoholeTitle & JSXBase.HTMLAttributes<HTMLMoholeTitleElement>;
