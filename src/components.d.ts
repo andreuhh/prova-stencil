@@ -14,6 +14,10 @@ export namespace Components {
     interface BtnWrapper {
     }
     interface ButtonChange {
+        /**
+          * text shown inside button
+         */
+        "label": string;
     }
     interface ButtonRemove {
     }
@@ -127,6 +131,13 @@ declare namespace LocalJSX {
     interface BtnWrapper {
     }
     interface ButtonChange {
+        /**
+          * text shown inside button
+         */
+        "label"?: string;
+        /**
+          * Event emitted when clicked on button
+         */
         "onChangeClick"?: (event: CustomEvent<any>) => void;
     }
     interface ButtonRemove {

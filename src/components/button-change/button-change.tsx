@@ -1,4 +1,4 @@
-import { Component, ComponentInterface, h, Event, EventEmitter } from '@stencil/core';
+import { Component, ComponentInterface, h, Event, EventEmitter, Prop } from '@stencil/core';
 
 @Component({
   tag: 'button-change',
@@ -6,17 +6,27 @@ import { Component, ComponentInterface, h, Event, EventEmitter } from '@stencil/
   shadow: true,
 })
 export class ButtonChange implements ComponentInterface {
-
+  /**
+   * Event emitted when clicked on button
+   */
   @Event() changeClick: EventEmitter;
+  /**
+   * text shown inside button
+   */
+  @Prop() label: string;
 
-  private changeHandler() {
+  private handleClick = () => {
     this.changeClick.emit();
   }
 
 
   render() {
     return (
-      <button class="button-change" onClick={() => this.changeHandler()}>Change</button>
+      <button class="pure-button pure-button-primary"
+        onClick={this.handleClick}
+      >
+        {this.label}
+      </button>
     );
   }
 
