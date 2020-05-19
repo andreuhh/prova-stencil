@@ -11,6 +11,8 @@ export namespace Components {
     interface AndreComponent {
         "titolo": string;
     }
+    interface AndreMenu {
+    }
     interface BtnWrapper {
     }
     interface ButtonChange {
@@ -28,6 +30,8 @@ export namespace Components {
         "titleArticle": string;
         "titleArticle2": string;
         "titleArticle3": string;
+    }
+    interface MoholeFooter {
     }
     interface MoholeMenu {
     }
@@ -54,6 +58,12 @@ declare global {
         prototype: HTMLAndreComponentElement;
         new (): HTMLAndreComponentElement;
     };
+    interface HTMLAndreMenuElement extends Components.AndreMenu, HTMLStencilElement {
+    }
+    var HTMLAndreMenuElement: {
+        prototype: HTMLAndreMenuElement;
+        new (): HTMLAndreMenuElement;
+    };
     interface HTMLBtnWrapperElement extends Components.BtnWrapper, HTMLStencilElement {
     }
     var HTMLBtnWrapperElement: {
@@ -77,6 +87,12 @@ declare global {
     var HTMLMoholeArticleElement: {
         prototype: HTMLMoholeArticleElement;
         new (): HTMLMoholeArticleElement;
+    };
+    interface HTMLMoholeFooterElement extends Components.MoholeFooter, HTMLStencilElement {
+    }
+    var HTMLMoholeFooterElement: {
+        prototype: HTMLMoholeFooterElement;
+        new (): HTMLMoholeFooterElement;
     };
     interface HTMLMoholeMenuElement extends Components.MoholeMenu, HTMLStencilElement {
     }
@@ -111,10 +127,12 @@ declare global {
     interface HTMLElementTagNameMap {
         "andre-card": HTMLAndreCardElement;
         "andre-component": HTMLAndreComponentElement;
+        "andre-menu": HTMLAndreMenuElement;
         "btn-wrapper": HTMLBtnWrapperElement;
         "button-change": HTMLButtonChangeElement;
         "button-remove": HTMLButtonRemoveElement;
         "mohole-article": HTMLMoholeArticleElement;
+        "mohole-footer": HTMLMoholeFooterElement;
         "mohole-menu": HTMLMoholeMenuElement;
         "mohole-title": HTMLMoholeTitleElement;
         "named-slot-paragraph": HTMLNamedSlotParagraphElement;
@@ -127,6 +145,8 @@ declare namespace LocalJSX {
     }
     interface AndreComponent {
         "titolo"?: string;
+    }
+    interface AndreMenu {
     }
     interface BtnWrapper {
     }
@@ -150,6 +170,8 @@ declare namespace LocalJSX {
         "titleArticle2"?: string;
         "titleArticle3"?: string;
     }
+    interface MoholeFooter {
+    }
     interface MoholeMenu {
     }
     interface MoholeTitle {
@@ -164,10 +186,12 @@ declare namespace LocalJSX {
     interface IntrinsicElements {
         "andre-card": AndreCard;
         "andre-component": AndreComponent;
+        "andre-menu": AndreMenu;
         "btn-wrapper": BtnWrapper;
         "button-change": ButtonChange;
         "button-remove": ButtonRemove;
         "mohole-article": MoholeArticle;
+        "mohole-footer": MoholeFooter;
         "mohole-menu": MoholeMenu;
         "mohole-title": MoholeTitle;
         "named-slot-paragraph": NamedSlotParagraph;
@@ -181,10 +205,12 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "andre-card": LocalJSX.AndreCard & JSXBase.HTMLAttributes<HTMLAndreCardElement>;
             "andre-component": LocalJSX.AndreComponent & JSXBase.HTMLAttributes<HTMLAndreComponentElement>;
+            "andre-menu": LocalJSX.AndreMenu & JSXBase.HTMLAttributes<HTMLAndreMenuElement>;
             "btn-wrapper": LocalJSX.BtnWrapper & JSXBase.HTMLAttributes<HTMLBtnWrapperElement>;
             "button-change": LocalJSX.ButtonChange & JSXBase.HTMLAttributes<HTMLButtonChangeElement>;
             "button-remove": LocalJSX.ButtonRemove & JSXBase.HTMLAttributes<HTMLButtonRemoveElement>;
             "mohole-article": LocalJSX.MoholeArticle & JSXBase.HTMLAttributes<HTMLMoholeArticleElement>;
+            "mohole-footer": LocalJSX.MoholeFooter & JSXBase.HTMLAttributes<HTMLMoholeFooterElement>;
             "mohole-menu": LocalJSX.MoholeMenu & JSXBase.HTMLAttributes<HTMLMoholeMenuElement>;
             "mohole-title": LocalJSX.MoholeTitle & JSXBase.HTMLAttributes<HTMLMoholeTitleElement>;
             "named-slot-paragraph": LocalJSX.NamedSlotParagraph & JSXBase.HTMLAttributes<HTMLNamedSlotParagraphElement>;
