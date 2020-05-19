@@ -18,7 +18,6 @@ export class MoholeArticle implements ComponentInterface {
     return (
       <div class="pure-g">
         <div class="pure-u-1-3">
-          <img src="img/nat-2.jpg" alt="" />
           <h3>{this.titleArticle}</h3>
           <p>{this.textArticle}</p>
           <button class="pure-button pure-button-primary">Show more</button>

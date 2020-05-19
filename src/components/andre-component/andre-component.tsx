@@ -10,17 +10,17 @@ export class AndreComponent implements ComponentInterface {
   @Prop() titolo: string;
   @State() isOpen: boolean;
 
-  toggle() {
+  private toggleHandler = () => {
     this.isOpen = !this.isOpen;
     console.log("toggle", this);
-  }
+  };
 
   render() {
     return (
       <div>
-        <h3 class="titolo" onClick={() => this.toggle()}>
-          {this.isOpen ? "aperto " : "chiuso "}
-          hello {this.titolo}
+        <h3 class="titolo" onClick={this.toggleHandler}>
+          {this.isOpen ? "sono una sez aperta " : " "}
+          hello{this.titolo}
         </h3>
         <div class={{ body: true, hidden: !this.isOpen }}>
           <slot />
