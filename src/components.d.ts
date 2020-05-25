@@ -13,6 +13,8 @@ export namespace Components {
     }
     interface AndreMenu {
     }
+    interface BgSample {
+    }
     interface BtnWrapper {
     }
     interface ButtonChange {
@@ -22,6 +24,8 @@ export namespace Components {
         "label": string;
     }
     interface ButtonRemove {
+    }
+    interface ImgSample {
     }
     interface MoholeArticle {
         "textArticle": string;
@@ -64,6 +68,12 @@ declare global {
         prototype: HTMLAndreMenuElement;
         new (): HTMLAndreMenuElement;
     };
+    interface HTMLBgSampleElement extends Components.BgSample, HTMLStencilElement {
+    }
+    var HTMLBgSampleElement: {
+        prototype: HTMLBgSampleElement;
+        new (): HTMLBgSampleElement;
+    };
     interface HTMLBtnWrapperElement extends Components.BtnWrapper, HTMLStencilElement {
     }
     var HTMLBtnWrapperElement: {
@@ -81,6 +91,12 @@ declare global {
     var HTMLButtonRemoveElement: {
         prototype: HTMLButtonRemoveElement;
         new (): HTMLButtonRemoveElement;
+    };
+    interface HTMLImgSampleElement extends Components.ImgSample, HTMLStencilElement {
+    }
+    var HTMLImgSampleElement: {
+        prototype: HTMLImgSampleElement;
+        new (): HTMLImgSampleElement;
     };
     interface HTMLMoholeArticleElement extends Components.MoholeArticle, HTMLStencilElement {
     }
@@ -128,9 +144,11 @@ declare global {
         "andre-card": HTMLAndreCardElement;
         "andre-component": HTMLAndreComponentElement;
         "andre-menu": HTMLAndreMenuElement;
+        "bg-sample": HTMLBgSampleElement;
         "btn-wrapper": HTMLBtnWrapperElement;
         "button-change": HTMLButtonChangeElement;
         "button-remove": HTMLButtonRemoveElement;
+        "img-sample": HTMLImgSampleElement;
         "mohole-article": HTMLMoholeArticleElement;
         "mohole-footer": HTMLMoholeFooterElement;
         "mohole-menu": HTMLMoholeMenuElement;
@@ -148,6 +166,8 @@ declare namespace LocalJSX {
     }
     interface AndreMenu {
     }
+    interface BgSample {
+    }
     interface BtnWrapper {
     }
     interface ButtonChange {
@@ -161,6 +181,8 @@ declare namespace LocalJSX {
         "onChangeClick"?: (event: CustomEvent<any>) => void;
     }
     interface ButtonRemove {
+    }
+    interface ImgSample {
     }
     interface MoholeArticle {
         "textArticle"?: string;
@@ -187,9 +209,11 @@ declare namespace LocalJSX {
         "andre-card": AndreCard;
         "andre-component": AndreComponent;
         "andre-menu": AndreMenu;
+        "bg-sample": BgSample;
         "btn-wrapper": BtnWrapper;
         "button-change": ButtonChange;
         "button-remove": ButtonRemove;
+        "img-sample": ImgSample;
         "mohole-article": MoholeArticle;
         "mohole-footer": MoholeFooter;
         "mohole-menu": MoholeMenu;
@@ -206,9 +230,11 @@ declare module "@stencil/core" {
             "andre-card": LocalJSX.AndreCard & JSXBase.HTMLAttributes<HTMLAndreCardElement>;
             "andre-component": LocalJSX.AndreComponent & JSXBase.HTMLAttributes<HTMLAndreComponentElement>;
             "andre-menu": LocalJSX.AndreMenu & JSXBase.HTMLAttributes<HTMLAndreMenuElement>;
+            "bg-sample": LocalJSX.BgSample & JSXBase.HTMLAttributes<HTMLBgSampleElement>;
             "btn-wrapper": LocalJSX.BtnWrapper & JSXBase.HTMLAttributes<HTMLBtnWrapperElement>;
             "button-change": LocalJSX.ButtonChange & JSXBase.HTMLAttributes<HTMLButtonChangeElement>;
             "button-remove": LocalJSX.ButtonRemove & JSXBase.HTMLAttributes<HTMLButtonRemoveElement>;
+            "img-sample": LocalJSX.ImgSample & JSXBase.HTMLAttributes<HTMLImgSampleElement>;
             "mohole-article": LocalJSX.MoholeArticle & JSXBase.HTMLAttributes<HTMLMoholeArticleElement>;
             "mohole-footer": LocalJSX.MoholeFooter & JSXBase.HTMLAttributes<HTMLMoholeFooterElement>;
             "mohole-menu": LocalJSX.MoholeMenu & JSXBase.HTMLAttributes<HTMLMoholeMenuElement>;

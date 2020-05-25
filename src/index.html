@@ -1,75 +1,59 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Fjalla+One&display=swap"
-      rel="stylesheet"
-    />
 
-    <title>Stencil Component Starter</title>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+  <link href="https://fonts.googleapis.com/css?family=Fjalla+One&display=swap" rel="stylesheet" />
 
-    <link rel="stylesheet" href="/build/prova-stencil.css" />
-    <!--<link rel="stylesheet" href="fontawesome/css/all.min.css" />-->
-    <script type="module" src="/build/prova-stencil.esm.js"></script>
-    <script nomodule src="/build/prova-stencil.js"></script>
-  </head>
+  <title>Stencil Component Starter</title>
 
-  <body>
-    <!--<mohole-menu></mohole-menu>-->
-    <andre-menu></andre-menu>
+  <link rel="stylesheet" href="/build/prova-stencil.css" />
+  <!--<link rel="stylesheet" href="fontawesome/css/all.min.css" />-->
+  <script type="module" src="/build/prova-stencil.esm.js"></script>
+  <script nomodule src="/build/prova-stencil.js"></script>
+</head>
 
-    <mohole-title title-string="il mio titolo che si vede"></mohole-title>
-    <mohole-article
-      title-article="Warm Waters"
-      ,
-      text-article=" Global warming and climate change pose an existential threat to the
+<body>
+  <!--<mohole-menu></mohole-menu>-->
+  <andre-menu></andre-menu>
+
+  <mohole-title title-string="il mio titolo che si vede"></mohole-title>
+  <mohole-article title-article="Warm Waters" , text-article=" Global warming and climate change pose an existential threat to the
     low-lying nations of the Pacific. Sea level rise, coastal erosion,
     and super typhoons are already proving scientists’ predictions that
-    they may disappear beneath the waves within decades."
-      ,
-      title-article-2="Seasons of Castelluccio"
-      ,
-      text-article-2="Yet the plain of Castelluccio is magnificent even in winter, and in this season the snow is plentiful
+    they may disappear beneath the waves within decades." , title-article-2="Seasons of Castelluccio" , text-article-2="Yet the plain of Castelluccio is magnificent even in winter, and in this season the snow is plentiful
      and offers views of great charm, an impressive peace and silence falling over the hills.
       During this bleak season the country is almost deserted, 
       and there are perhaps only four or five families resisting the complete
-       isolation that is so often created when the roads become impassable and blocked by deep snow."
-      ,
-      title-article-3="Rainbow Warriors"
-      ,
-      text-article-3="The event was founded by Alessandro
+       isolation that is so often created when the roads become impassable and blocked by deep snow." ,
+    title-article-3="Rainbow Warriors" , text-article-3="The event was founded by Alessandro
      d‘Emilia and Armin Holzer, two highliners who wanted to share the spectacular scenery of 
      Monte Piana (Misurina) in the Dolomites, giving professionals and enthusiasts from all 
      over the world the chance to slackline between mountain peaks,
-     hang out in hammocks strung high in the sky, and meet like-minded people."
-    >
-    </mohole-article>
+     hang out in hammocks strung high in the sky, and meet like-minded people.">
+  </mohole-article>
 
-    <mohole-title title-string="il mio nuovo titolo"></mohole-title>
+  <mohole-title title-string="il mio nuovo titolo"></mohole-title>
 
-    <slot-paragraph>
-      <ul>
-        <li>first</li>
-        <li>second</li>
-      </ul>
-    </slot-paragraph>
+  <slot-paragraph>
+    <ul>
+      <li>first</li>
+      <li>second</li>
+    </ul>
+  </slot-paragraph>
 
-    <named-slot-paragraph>
-      <h2 slot="first">This is in the first slot</h2>
-      <label slot="second">This is in the second slot</label>
-    </named-slot-paragraph>
+  <named-slot-paragraph>
+    <h2 slot="first">This is in the first slot</h2>
+    <label slot="second">This is in the second slot</label>
+  </named-slot-paragraph>
 
-    <btn-wrapper></btn-wrapper>
-    <andre-component></andre-component>
-    <andre-card></andre-card>
-    <mohole-footer></mohole-footer>
-    <andre-form></andre-form>
-    <!-- <andre-card></andre-card>
+  <btn-wrapper></btn-wrapper>
+  <andre-component></andre-component>
+  <andre-card></andre-card>
+  <mohole-footer></mohole-footer>
+  <andre-form></andre-form>
+  <!-- <andre-card></andre-card>
    <andre-component titolo="mario">
       <input type="text" />
       <input type="text" />
@@ -80,5 +64,8 @@
         Click me!
       </button>
     </andre-component>-->
-  </body>
+  <img-sample></img-sample>
+  <bg-sample></bg-sample>
+</body>
+
 </html>

@@ -4,6 +4,7 @@ import { Component, ComponentInterface, h } from '@stencil/core';
   tag: 'andre-card',
   styleUrl: 'andre-card.scss',
   shadow: true,
+  assetsDirs: ["/img/girl-small.jpg"]
 })
 export class AndreCard implements ComponentInterface {
 
