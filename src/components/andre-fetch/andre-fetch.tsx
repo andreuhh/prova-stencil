@@ -26,7 +26,6 @@ export class AndreFetch implements ComponentInterface {
   // call first 3 news items without push the botton
   componentDidLoad() {
     this.fetchData();
-
   }
 
   private fetchData = () => {
@@ -34,7 +33,6 @@ export class AndreFetch implements ComponentInterface {
       return;
     }
     fetch(`https://jsonplaceholder.typicode.com/posts?_limit=${this.limit}&_page=${this.page}`)
-
       .then(response => response.json())
       .then((json) => (this.users = json))
     this.limit += 3;
@@ -55,8 +53,6 @@ export class AndreFetch implements ComponentInterface {
           </div>
         )}
         <button class='pure-button fetch-button' onClick={this.fetchData}>andre fetch</button>
-
-
       </Host>
     );
   }
