@@ -20,7 +20,7 @@ export class AndreComponent implements ComponentInterface {
       <div>
         <h3 class="titolo" onClick={this.toggleHandler}>
           {this.isOpen ? "sono una sez aperta " : " "}
-          hello{this.titolo}
+          hello
         </h3>
         <div class={{ body: true, hidden: !this.isOpen }}>
           <slot />

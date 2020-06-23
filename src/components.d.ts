@@ -11,6 +11,8 @@ export namespace Components {
     interface AndreComponent {
         "titolo": string;
     }
+    interface AndreFetch {
+    }
     interface AndreMenu {
     }
     interface BgSample {
@@ -24,6 +26,8 @@ export namespace Components {
         "label": string;
     }
     interface ButtonRemove {
+    }
+    interface FetchSample {
     }
     interface ImgSample {
     }
@@ -44,6 +48,12 @@ export namespace Components {
     }
     interface NamedSlotParagraph {
     }
+    interface PostsContainer {
+    }
+    interface PostsLoader {
+    }
+    interface ProvaForm {
+    }
     interface SimpleLabel {
     }
     interface SlotParagraph {
@@ -61,6 +71,12 @@ declare global {
     var HTMLAndreComponentElement: {
         prototype: HTMLAndreComponentElement;
         new (): HTMLAndreComponentElement;
+    };
+    interface HTMLAndreFetchElement extends Components.AndreFetch, HTMLStencilElement {
+    }
+    var HTMLAndreFetchElement: {
+        prototype: HTMLAndreFetchElement;
+        new (): HTMLAndreFetchElement;
     };
     interface HTMLAndreMenuElement extends Components.AndreMenu, HTMLStencilElement {
     }
@@ -91,6 +107,12 @@ declare global {
     var HTMLButtonRemoveElement: {
         prototype: HTMLButtonRemoveElement;
         new (): HTMLButtonRemoveElement;
+    };
+    interface HTMLFetchSampleElement extends Components.FetchSample, HTMLStencilElement {
+    }
+    var HTMLFetchSampleElement: {
+        prototype: HTMLFetchSampleElement;
+        new (): HTMLFetchSampleElement;
     };
     interface HTMLImgSampleElement extends Components.ImgSample, HTMLStencilElement {
     }
@@ -128,6 +150,24 @@ declare global {
         prototype: HTMLNamedSlotParagraphElement;
         new (): HTMLNamedSlotParagraphElement;
     };
+    interface HTMLPostsContainerElement extends Components.PostsContainer, HTMLStencilElement {
+    }
+    var HTMLPostsContainerElement: {
+        prototype: HTMLPostsContainerElement;
+        new (): HTMLPostsContainerElement;
+    };
+    interface HTMLPostsLoaderElement extends Components.PostsLoader, HTMLStencilElement {
+    }
+    var HTMLPostsLoaderElement: {
+        prototype: HTMLPostsLoaderElement;
+        new (): HTMLPostsLoaderElement;
+    };
+    interface HTMLProvaFormElement extends Components.ProvaForm, HTMLStencilElement {
+    }
+    var HTMLProvaFormElement: {
+        prototype: HTMLProvaFormElement;
+        new (): HTMLProvaFormElement;
+    };
     interface HTMLSimpleLabelElement extends Components.SimpleLabel, HTMLStencilElement {
     }
     var HTMLSimpleLabelElement: {
@@ -143,17 +183,22 @@ declare global {
     interface HTMLElementTagNameMap {
         "andre-card": HTMLAndreCardElement;
         "andre-component": HTMLAndreComponentElement;
+        "andre-fetch": HTMLAndreFetchElement;
         "andre-menu": HTMLAndreMenuElement;
         "bg-sample": HTMLBgSampleElement;
         "btn-wrapper": HTMLBtnWrapperElement;
         "button-change": HTMLButtonChangeElement;
         "button-remove": HTMLButtonRemoveElement;
+        "fetch-sample": HTMLFetchSampleElement;
         "img-sample": HTMLImgSampleElement;
         "mohole-article": HTMLMoholeArticleElement;
         "mohole-footer": HTMLMoholeFooterElement;
         "mohole-menu": HTMLMoholeMenuElement;
         "mohole-title": HTMLMoholeTitleElement;
         "named-slot-paragraph": HTMLNamedSlotParagraphElement;
+        "posts-container": HTMLPostsContainerElement;
+        "posts-loader": HTMLPostsLoaderElement;
+        "prova-form": HTMLProvaFormElement;
         "simple-label": HTMLSimpleLabelElement;
         "slot-paragraph": HTMLSlotParagraphElement;
     }
@@ -163,6 +208,8 @@ declare namespace LocalJSX {
     }
     interface AndreComponent {
         "titolo"?: string;
+    }
+    interface AndreFetch {
     }
     interface AndreMenu {
     }
@@ -181,6 +228,8 @@ declare namespace LocalJSX {
         "onChangeClick"?: (event: CustomEvent<any>) => void;
     }
     interface ButtonRemove {
+    }
+    interface FetchSample {
     }
     interface ImgSample {
     }
@@ -201,6 +250,12 @@ declare namespace LocalJSX {
     }
     interface NamedSlotParagraph {
     }
+    interface PostsContainer {
+    }
+    interface PostsLoader {
+    }
+    interface ProvaForm {
+    }
     interface SimpleLabel {
     }
     interface SlotParagraph {
@@ -208,17 +263,22 @@ declare namespace LocalJSX {
     interface IntrinsicElements {
         "andre-card": AndreCard;
         "andre-component": AndreComponent;
+        "andre-fetch": AndreFetch;
         "andre-menu": AndreMenu;
         "bg-sample": BgSample;
         "btn-wrapper": BtnWrapper;
         "button-change": ButtonChange;
         "button-remove": ButtonRemove;
+        "fetch-sample": FetchSample;
         "img-sample": ImgSample;
         "mohole-article": MoholeArticle;
         "mohole-footer": MoholeFooter;
         "mohole-menu": MoholeMenu;
         "mohole-title": MoholeTitle;
         "named-slot-paragraph": NamedSlotParagraph;
+        "posts-container": PostsContainer;
+        "posts-loader": PostsLoader;
+        "prova-form": ProvaForm;
         "simple-label": SimpleLabel;
         "slot-paragraph": SlotParagraph;
     }
@@ -229,17 +289,22 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "andre-card": LocalJSX.AndreCard & JSXBase.HTMLAttributes<HTMLAndreCardElement>;
             "andre-component": LocalJSX.AndreComponent & JSXBase.HTMLAttributes<HTMLAndreComponentElement>;
+            "andre-fetch": LocalJSX.AndreFetch & JSXBase.HTMLAttributes<HTMLAndreFetchElement>;
             "andre-menu": LocalJSX.AndreMenu & JSXBase.HTMLAttributes<HTMLAndreMenuElement>;
             "bg-sample": LocalJSX.BgSample & JSXBase.HTMLAttributes<HTMLBgSampleElement>;
             "btn-wrapper": LocalJSX.BtnWrapper & JSXBase.HTMLAttributes<HTMLBtnWrapperElement>;
             "button-change": LocalJSX.ButtonChange & JSXBase.HTMLAttributes<HTMLButtonChangeElement>;
             "button-remove": LocalJSX.ButtonRemove & JSXBase.HTMLAttributes<HTMLButtonRemoveElement>;
+            "fetch-sample": LocalJSX.FetchSample & JSXBase.HTMLAttributes<HTMLFetchSampleElement>;
             "img-sample": LocalJSX.ImgSample & JSXBase.HTMLAttributes<HTMLImgSampleElement>;
             "mohole-article": LocalJSX.MoholeArticle & JSXBase.HTMLAttributes<HTMLMoholeArticleElement>;
             "mohole-footer": LocalJSX.MoholeFooter & JSXBase.HTMLAttributes<HTMLMoholeFooterElement>;
             "mohole-menu": LocalJSX.MoholeMenu & JSXBase.HTMLAttributes<HTMLMoholeMenuElement>;
             "mohole-title": LocalJSX.MoholeTitle & JSXBase.HTMLAttributes<HTMLMoholeTitleElement>;
             "named-slot-paragraph": LocalJSX.NamedSlotParagraph & JSXBase.HTMLAttributes<HTMLNamedSlotParagraphElement>;
+            "posts-container": LocalJSX.PostsContainer & JSXBase.HTMLAttributes<HTMLPostsContainerElement>;
+            "posts-loader": LocalJSX.PostsLoader & JSXBase.HTMLAttributes<HTMLPostsLoaderElement>;
+            "prova-form": LocalJSX.ProvaForm & JSXBase.HTMLAttributes<HTMLProvaFormElement>;
             "simple-label": LocalJSX.SimpleLabel & JSXBase.HTMLAttributes<HTMLSimpleLabelElement>;
             "slot-paragraph": LocalJSX.SlotParagraph & JSXBase.HTMLAttributes<HTMLSlotParagraphElement>;
         }
